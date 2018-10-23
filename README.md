@@ -38,22 +38,25 @@ One of the main issues with stock loss is that the data is only recorded sporadi
 
 Once we have found correlations with our data, we should be able to create a model to predict USL.
 
-
 # Real time loss prevention
 
-Once we have good baseline information about stock loss in the organization, we can use this information to implement an algorithm to manage stock loss in real time.
+Once we have good baseline information about stock loss in the organization, we can use this information to implement an algorithm to help reduce stock loss in real time.
 
-## Video analysis
+## Customer movement model
 
-Video analysis will allow us to create a database of people (customers/staff etc) who may be stealing.
+We create a customer movement model that uses video cameras to analyze the movement of customers and staff throughout the store. We use this information to help us track how customers and staff move within the store to look for correlations in movement within the store, dress and other behaviors that might point towards a higher likelihood of them stealing.
 
-We create a baseline travel model that monitors the movement of customers and staff throughout the store. We use this information to help us track normal movement within the store (which can be useful for much more than just )
+SIDE NOTE: A model like this would be valuable for marketing and product placement within the store.
 
-We use the system to flag customers who visit areas in the store that have products that are stolen more often than the baseline. For example, most people do not need to buy razors every week.
+### Starting correlations
 
-To calculate out if theft is occurring in real time we can use video to detect human beings who are putting product in their clothing.
+When creating a machine learning model, we need to start with some possible correlations between data. We could use the following correlations:
 
-While neither of these metrics tell us perfectly if theft is occurring, we can assume that people who steal, will most likely steal again. This means that the algorithm can create a database of "possible theft occurrences", look for those people again when they enter the store and monitor their movements.
+Customer's who's movement is focused around areas where USL products are available within the store might be a predictor for theft. For example, most people do not need to buy razors or batteries (example USL products) every week, if a customer visited these areas more regularly than normal, it is possible they are stealing.
+
+To calculate out if theft is occurring in real time we can use video to detect human beings who are putting product places where it isn't often stored - clothing, bags instead of trolleys and baskets. This would require us to be able to detect product in video frames using a CNN model. 
+
+While neither of these metrics tell us definitively if theft is occurring, we can assume that people who steal, will most likely steal again. This means that the algorithm can create a database of "possible theft occurrences" and watch for those people if they enter the store again and monitor their movements.
 
 Customers the algorithm has not seen before may be more likely to be shoplifting.
 
