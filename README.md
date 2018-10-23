@@ -2,6 +2,8 @@
 
 This machine learning challenge came to me from a friend. He and I were discussing some challenges he saw in the retail space and I wanted to see how I would create a machine learning model to help retailers with loss prevention (or theft of product).
 
+**Current Status of this repository** -> a initial dump of my thoughts
+
 # Data Analysis
 
 A machine learning algorithm is only as good as the data you feed it. If you do not understand the data, misinterpret what the data is telling you or miss important correlations, the algorithm will probably be useless. This is the main reason my most machine learning experts spend 75% of their time on the data.
